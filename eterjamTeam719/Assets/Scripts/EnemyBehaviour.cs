@@ -9,14 +9,12 @@ public class EnemyBehaviour : MonoBehaviour
     private bool isDetected, isInSight;
     public LayerMask fovLayer;
     public int speed;
-    private bool isDetected, isInSight;
     public Transform characterLocation;
 
     void Update()
     {
         if(isDetected)
         {
-        if(isDetected){
             Vector3 thisObject = this.GetComponent<Transform>().position;
             RaycastHit2D hit = Physics2D.Linecast(characterLocation.position,thisObject, fovLayer.value);
             Debug.DrawLine(characterLocation.position,thisObject,new Color32(255,0,0,255),10f);
@@ -24,7 +22,6 @@ public class EnemyBehaviour : MonoBehaviour
             Debug.Log(characterLocation.position);
             Debug.Log(hit.collider);
             Debug.Log(characterLocation.transform.position);
-            }
         }
 
 
@@ -35,8 +32,6 @@ public class EnemyBehaviour : MonoBehaviour
         this.characterLocation = characterLocation;
         isDetected= true;
         Debug.Log(isDetected);
-
-        
     }
 
     public void LosingCollider()
