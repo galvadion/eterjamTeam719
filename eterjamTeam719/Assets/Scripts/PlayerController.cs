@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         transform.position += new Vector3((h * speed * Time.deltaTime), (v * speed * Time.deltaTime), 0f);
-
+        
         Vector3 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 lookAt = mouseScreenPosition;
         float AngleRad = Mathf.Atan2(lookAt.y - this.transform.position.y, lookAt.x - this.transform.position.x);
