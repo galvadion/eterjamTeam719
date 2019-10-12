@@ -7,7 +7,7 @@ public class ConeCollision : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponent<EnemyBehaviour>()?.DetectSight(this.GetComponentInParent<Transform>());
+        collision.GetComponent<EnemyBehaviour>()?.DetectSight(this.GetComponentInParent<Transform>().parent);
     }
 
     void OnTriggerExit2D(Collider2D collision)
