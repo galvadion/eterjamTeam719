@@ -29,14 +29,11 @@ public class EnemyBehaviour : MonoBehaviour
             {
                 isInSight = false;
             }
-
         }
         else
         {
             this.GetComponent<NavMeshAgent>().isStopped = true;
         }
-
-
     }
 
     public void DetectSight(Transform characterLocation)
