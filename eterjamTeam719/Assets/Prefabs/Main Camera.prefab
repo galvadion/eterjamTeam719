@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  pausePanel: {fileID: 0}
 --- !u!82 &265325049787849857
 AudioSource:
   m_ObjectHideFlags: 0

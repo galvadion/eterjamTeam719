@@ -11,12 +11,13 @@ public class GameManager : MonoBehaviour
     public AudioSource source;
     public GameObject lights;
     public AudioClip[] thunderAudios;
+    public GameObject[] enemyBehaviours;
 
     private void Start()
     {
         DontDestroyOnLoad(this.gameObject);
         player = GameObject.FindGameObjectWithTag("Player");
-         playLighting();
+        Invoke("playLighting", UnityEngine.Random.Range(3f, 10f));
     }
 
     public void Death()
@@ -28,14 +29,14 @@ public class GameManager : MonoBehaviour
     public void playLighting()
     {
         int lightningCount = 5;
-        foreach(var i in System.Linq.Enumerable.Range(1, lightningCount))
+        foreach (var i in System.Linq.Enumerable.Range(1, lightningCount))
         {
-            StartCoroutine(waitForAction(flashLight,i*.1f+UnityEngine.Random.Range(0f,0.4f)));
+            StartCoroutine(waitForAction(flashLight, i * .1f + UnityEngine.Random.Range(0f, 0.4f)));
         }
-        var thunderDelay = UnityEngine.Random.Range(2f,3f);
-        StartCoroutine(waitForAction(playThunderClip,thunderDelay));
-        var lightingBurstInterval = UnityEngine.Random.Range(5f,10f);
-        StartCoroutine(waitForAction(playLighting,lightingBurstInterval));
+        var thunderDelay = UnityEngine.Random.Range(2f, 3f);
+        StartCoroutine(waitForAction(playThunderClip, thunderDelay));
+        var lightingBurstInterval = UnityEngine.Random.Range(15f, 20f);
+        StartCoroutine(waitForAction(playLighting, lightingBurstInterval));
     }
 
     public void playThunderClip()
@@ -43,22 +44,31 @@ public class GameManager : MonoBehaviour
         int index = UnityEngine.Random.Range(0, thunderAudios.Length);
         source.clip = thunderAudios[index];
         source.Play();
-        audioLocked = false;
     }
-    
-    IEnumerator waitForAction(Action action,float time){
+
+    IEnumerator waitForAction(Action action, float time)
+    {
         yield return new WaitForSeconds(time);
         action();
     }
 
-    public void flashLight(){
+    public void flashLight()
+    {
         StartCoroutine(fadeLight());
     }
     IEnumerator fadeLight()
     {
         lights.SetActive(true);
-        yield return new WaitForSeconds(UnityEngine.Random.Range(0.1f,.3f));
+        foreach (var enemy in enemyBehaviours)
+        {
+            enemy.GetComponent<EnemyBehaviour>().CrazyMove();
+        }
+        yield return new WaitForSeconds(UnityEngine.Random.Range(0.1f, .3f));
         lights.SetActive(false);
+        foreach (var enemy in enemyBehaviours)
+        {
+            enemy.GetComponent<EnemyBehaviour>().StopCrazyMovement();
+        }
     }
 
     /*
