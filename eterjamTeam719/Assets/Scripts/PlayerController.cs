@@ -6,20 +6,31 @@ public class PlayerController : MonoBehaviour
 {
     [Header ("Movement")]
     public float speed;
+    public Animator anim;
+    public Vector2 movement;
 
     private GameManager gM;
+    private Rigidbody2D rb;
 
     private void Start()
     {
       gM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-        transform.position += new Vector3((h * speed * Time.deltaTime), (v * speed * Time.deltaTime), 0f);
+        anim.SetFloat("Horizontal" ,movement.x);
+        anim.SetFloat("Vertical", movement.y);
+        anim.SetFloat("Speed", movement.sqrMagnitude);
+    }
+
+    private void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -20,6 +20,33 @@ TextureImporter:
   - first:
       213: -7350273424202507969
     second: spriteslydia1_5
+  - first:
+      213: 8134438838371505621
+    second: spriteslydia1_6
+  - first:
+      213: -5793250635530697075
+    second: spriteslydia1_7
+  - first:
+      213: -7757908007299858490
+    second: spriteslydia1_8
+  - first:
+      213: 9102327606622619456
+    second: spriteslydia1_9
+  - first:
+      213: 8655521969475761297
+    second: spriteslydia1_10
+  - first:
+      213: 5076881534722668344
+    second: spriteslydia1_11
+  - first:
+      213: 4409120057357534666
+    second: spriteslydia1_12
+  - first:
+      213: -6577368769889613574
+    second: spriteslydia1_13
+  - first:
+      213: -5508471127162934603
+    second: spriteslydia1_14
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -130,7 +157,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff3d94285beb7f04ea4b83b43fd634c7
+      spriteID: 0d30ff032db621c47a1da29a92a66ff2
       internalID: 3889360710175563936
       vertices: []
       indices: 
@@ -144,14 +171,14 @@ TextureImporter:
         y: 128
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebbc876662ce37048addb4b2ac603aa6
+      spriteID: 9976c75b473821d4fa178b955fc4ed4b
       internalID: 3941693532089305334
       vertices: []
       indices: 
@@ -161,18 +188,18 @@ TextureImporter:
       name: spriteslydia1_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 64
+        y: 128
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6f8df4338b1dec42852143d76b9b8de
+      spriteID: 3b6cabfac06b4e7449616a44f8f0b612
       internalID: 4574076371736275960
       vertices: []
       indices: 
@@ -182,18 +209,18 @@ TextureImporter:
       name: spriteslydia1_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 96
+        y: 128
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 587bfa3c672b0ef43bc54f4a3a7fc0c1
+      spriteID: 5326814e7a2c5444a939af992dbb219a
       internalID: 7363107710782138508
       vertices: []
       indices: 
@@ -203,18 +230,18 @@ TextureImporter:
       name: spriteslydia1_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 128
+        y: 128
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fa6d16075927f046b140820a5da90b4
+      spriteID: 2e28a465c779a734083b68b0e302099b
       internalID: -3070093401345736047
       vertices: []
       indices: 
@@ -224,19 +251,208 @@ TextureImporter:
       name: spriteslydia1_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 0
+        y: 65
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7edb43c9dbe01347bdfc02fa950d3e9
+      spriteID: c43e2be51577da74f8dfdcb255497462
       internalID: -7350273424202507969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteslydia1_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e758d6d28b00c4c969c34190ab6e30
+      internalID: 8134438838371505621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteslydia1_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c09d50d94b5d4438665052ef02c513
+      internalID: -5793250635530697075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteslydia1_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14c245c3f8088745a40a984f32cca7e
+      internalID: -7757908007299858490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteslydia1_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc1dfd5cb941144a938c41cde1bdc21
+      internalID: 9102327606622619456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteslydia1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aec5e850e04f6647982b616e2761c4e
+      internalID: 8655521969475761297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteslydia1_11
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ae90d1114fcbf46806dbdc3f6969cd
+      internalID: 5076881534722668344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteslydia1_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762600880c763234db59fbbc95ebe7e9
+      internalID: 4409120057357534666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteslydia1_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ca9173e599d7f4eba1f8b308812dce
+      internalID: -6577368769889613574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spriteslydia1_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b384ef7bd4b062428b47081bd439ef6
+      internalID: -5508471127162934603
       vertices: []
       indices: 
       edges: []
