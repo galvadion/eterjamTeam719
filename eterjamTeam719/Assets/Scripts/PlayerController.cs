@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-      //  gM = GameObject.Find("GameManager").GetComponent<GameManager>();
+      gM = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void Update()
