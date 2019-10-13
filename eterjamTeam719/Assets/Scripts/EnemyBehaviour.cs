@@ -12,6 +12,7 @@ public class EnemyBehaviour : MonoBehaviour
     public int speed;
     public Transform characterLocation;
     public Transform[] randomPoints;
+    
 
     void Update()
     {

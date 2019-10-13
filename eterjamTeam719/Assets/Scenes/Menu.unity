@@ -288,8 +288,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -160, y: -23.4}
-  m_SizeDelta: {x: 320, y: 60}
+  m_AnchoredPosition: {x: -320, y: -23.4}
+  m_SizeDelta: {x: 640, y: 120}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1005101440
 MonoBehaviour:
@@ -419,10 +419,10 @@ RectTransform:
   m_Father: {fileID: 1072446934}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 44, y: -14.599998}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058362712
 MonoBehaviour:
@@ -489,8 +489,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: -2474379588949674259, guid: 46128c7bbe6fc084ba94977f27dfd45e,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0780590282f4f014d83331715b310990, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -633,7 +632,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5d36ced50da274f4fa00fd5c5730d307, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0780590282f4f014d83331715b310990, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -764,8 +763,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -103, y: 0}
-  m_SizeDelta: {x: 212, y: 40}
+  m_AnchoredPosition: {x: -212, y: 0}
+  m_SizeDelta: {x: 424, y: 80}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1413646443
 MonoBehaviour:
@@ -809,7 +808,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1413646444}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1072446937}
+        m_MethodName: onCreditClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1413646444

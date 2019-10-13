@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         Invoke("playLighting", UnityEngine.Random.Range(3f, 10f));
         enemyBehaviours = GameObject.FindGameObjectsWithTag("Enemy");
+        lights.SetActive(false);
     }
 
     public void Death()

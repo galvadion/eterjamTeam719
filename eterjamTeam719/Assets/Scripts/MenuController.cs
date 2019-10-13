@@ -8,12 +8,17 @@ public class MenuController : MonoBehaviour
 
     public void onStartClick()
     {
-        SceneManager.LoadScene("FirstScenary");
+        SceneManager.LoadScene("MainScene");
     }
 
     public void onCreditClick()
     {
         SceneManager.LoadScene("Credits");
+    }
+
+    public void onMenuClick()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public void onQuitClick()
