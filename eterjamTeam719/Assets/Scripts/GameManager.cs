@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);
         player = GameObject.FindGameObjectWithTag("Player");
-         playLighting();
+        Invoke("playLighting",UnityEngine.Random.Range(3f,10f));
     }
 
     public void Death()
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         }
         var thunderDelay = UnityEngine.Random.Range(2f,3f);
         StartCoroutine(waitForAction(playThunderClip,thunderDelay));
-        var lightingBurstInterval = UnityEngine.Random.Range(5f,10f);
+        var lightingBurstInterval = UnityEngine.Random.Range(15f,20f);
         StartCoroutine(waitForAction(playLighting,lightingBurstInterval));
     }
 
@@ -43,7 +43,6 @@ public class GameManager : MonoBehaviour
         int index = UnityEngine.Random.Range(0, thunderAudios.Length);
         source.clip = thunderAudios[index];
         source.Play();
-        audioLocked = false;
     }
     
     IEnumerator waitForAction(Action action,float time){
