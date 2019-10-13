@@ -27,7 +27,7 @@ public class EnemyBehaviour : MonoBehaviour
                 this.GetComponent<NavMeshAgent>().angularSpeed = 120;
                 this.GetComponent<NavMeshAgent>().isStopped = false;
                 isInSight = true;
-                this.GetComponent<NavMeshAgent>().SetDestination(characterLocation.position);
+                Invoke("startMovement", .5f);
             }
             else
             {
@@ -42,6 +42,11 @@ public class EnemyBehaviour : MonoBehaviour
             }
 
         }
+    }
+
+    public void startMovement()
+    {
+        this.GetComponent<NavMeshAgent>().SetDestination(characterLocation.position);
     }
 
     public void DetectSight(Transform characterLocation)

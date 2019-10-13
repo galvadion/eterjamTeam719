@@ -20,17 +20,25 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space) && !pausePanel.activeInHierarchy)
         {
-            if (!pausePanel.activeInHierarchy)
-            {
-                PauseGame();
-            }
-            if (pausePanel.activeInHierarchy)
-            {
-                ContinueGame();
-            }
+            PauseGame();
         }
+        else if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space) && pausePanel.activeInHierarchy)
+        {
+            ContinueGame();
+        }
+        /*
+        Debug.Log(pausePanel.activeInHierarchy);
+        if (!pausePanel.activeInHierarchy)
+        {
+            PauseGame();
+        }
+        if (pausePanel.activeInHierarchy)
+        {
+            ContinueGame();
+        } */
+
     }
 
     // LateUpdate is called after Update each frame
@@ -42,8 +50,10 @@ public class CameraController : MonoBehaviour
 
     private void PauseGame()
     {
-        Time.timeScale = 0;
+
         pausePanel.SetActive(true);
+        Time.timeScale = 0;
+
         //Disable scripts that still work while timescale is set to 0
     }
     public void ContinueGame()

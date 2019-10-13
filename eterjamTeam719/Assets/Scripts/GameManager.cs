@@ -11,13 +11,14 @@ public class GameManager : MonoBehaviour
     public AudioSource source;
     public GameObject lights;
     public AudioClip[] thunderAudios;
-    public GameObject[] enemyBehaviours;
+    private GameObject[] enemyBehaviours;
 
     private void Start()
     {
         DontDestroyOnLoad(this.gameObject);
         player = GameObject.FindGameObjectWithTag("Player");
         Invoke("playLighting", UnityEngine.Random.Range(3f, 10f));
+        enemyBehaviours = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     public void Death()
