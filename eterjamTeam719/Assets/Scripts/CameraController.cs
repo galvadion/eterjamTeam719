@@ -20,10 +20,8 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Fixed");
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Input");
             if (!pausePanel.activeInHierarchy)
             {
                 PauseGame();
