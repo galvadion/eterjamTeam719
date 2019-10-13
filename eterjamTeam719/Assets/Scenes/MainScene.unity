@@ -1630,6 +1630,11 @@ PrefabInstance:
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1096887483387935935, guid: ddfdb96c2a4bc1a46ba229d2262b6016,
+        type: 3}
+      propertyPath: flashlight
+      value: 
+      objectReference: {fileID: 514481989}
     - target: {fileID: 881876791185281483, guid: ddfdb96c2a4bc1a46ba229d2262b6016,
         type: 3}
       propertyPath: m_LocalPosition.z
