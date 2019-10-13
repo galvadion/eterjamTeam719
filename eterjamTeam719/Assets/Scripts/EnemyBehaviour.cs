@@ -1,27 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    [Header ("Movement")]
+    [Header("Movement")]
 
-    private bool isDetected, isInSight;
+    private bool isDetected = false, isInSight = false;
     public LayerMask fovLayer;
     public int speed;
     public Transform characterLocation;
 
     void Update()
     {
-        if(isDetected)
+        if (isDetected)
         {
             Vector3 thisObject = this.GetComponent<Transform>().position;
-            RaycastHit2D hit = Physics2D.Linecast(characterLocation.position,thisObject, fovLayer.value);
-            Debug.DrawLine(characterLocation.position,thisObject,new Color32(255,0,0,255),10f);
-            Debug.Log(thisObject);
-            Debug.Log(characterLocation.position);
-            Debug.Log(hit.collider);
-            Debug.Log(characterLocation.transform.position);
+            RaycastHit2D hit = Physics2D.Linecast(thisObject, characterLocation.position, fovLayer.value);
+            //  Debug.DrawLine(characterLocation.position, thisObject,new Color32(255,0,0,255),10f);
+            if (hit.collider.tag == "Player")
+            {
+                this.GetComponent<NavMeshAgent>().isStopped = false;
+                isInSight = true;
+                this.GetComponent<NavMeshAgent>().SetDestination(characterLocation.position);
+            }
+            else
+            {
+                isInSight = false;
+            }
+
+        }
+        else
+        {
+            this.GetComponent<NavMeshAgent>().isStopped = true;
         }
 
 
@@ -30,13 +42,12 @@ public class EnemyBehaviour : MonoBehaviour
     public void DetectSight(Transform characterLocation)
     {
         this.characterLocation = characterLocation;
-        isDetected= true;
-        Debug.Log(isDetected);
+        isDetected = true;
     }
 
     public void LosingCollider()
     {
-        isDetected= false;
-        Debug.Log(isDetected);
+        isDetected = false;
+        isInSight = false;
     }
 }
